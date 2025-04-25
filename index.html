@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimum Wage Research Graphic</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .section {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .section-left {
+            background-color: #f9f9f9;
+            border-right: 1px solid #eaeaea;
+        }
+        
+        .section-right {
+            background-color: #ffffff;
+        }
+        
+        .wage-amount {
+            font-size: 36px;
+            font-weight: bold;
+            color: #003366;
+            margin: 15px 0;
+        }
+        
+        .description {
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        
+        .pie-container {
+            width: 180px;
+            height: 180px;
+            position: relative;
+            margin: 10px auto;
+        }
+        
+        .label {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+        
+        .footer {
+            background-color: #f0f0f0;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+            font-size: 12px;
+        }
+        
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            margin-right: 5px;
+            border-radius: 2px;
+        }
+        
+        .efficiency-color {
+            background-color: #4e79a7;
+        }
+        
+        .redistribution-color {
+            background-color: #f28e2b;
+        }
+        
+        /* Pie chart for efficiency only */
+        .pie-chart-efficiency {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(
+                #4e79a7 0% 100%
+            );
+        }
+        
+        /* Pie chart for combined */
+        .pie-chart-combined {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(
+                #4e79a7 0% 5%,
+                #f28e2b 5% 100%
+            );
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #003366;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+        
+        .social-info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            text-align: left;
+        }
+        
+        .social-heading {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .hashtags {
+            margin-top: 10px;
+            color: #003366;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">The Real Impact of Minimum Wage Policies</div>
+            <div class="subtitle">New research challenges traditional economic thinking</div>
+        </div>
+        
+        <div class="content">
+            <div class="section section-left">
+                <h2>For Efficiency Only</h2>
+                <div class="wage-amount">$8.00</div>
+                <div class="description">Optimal minimum wage when only considering market efficiency</div>
+                
+                <div class="pie-container">
+                    <div class="pie-chart-efficiency"></div>
+                </div>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color efficiency-color"></div>
+                        <span>100% Efficiency</span>
+                    </div>
+                </div>
+                <div class="label">Recovers only 2% of efficiency losses from monopsony power</div>
+            </div>
+            
+            <div class="section section-right">
+                <h2>Including Redistribution</h2>
+                <div class="wage-amount">$15.00</div>
+                <div class="description">Optimal minimum wage when considering both efficiency and fair distribution</div>
+                
+                <div class="pie-container">
+                    <div class="pie-chart-combined"></div>
+                </div>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color efficiency-color"></div>
+                        <span>5% Efficiency</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color redistribution-color"></div>
+                        <span>95% Redistribution</span>
+                    </div>
+                </div>
+                <div class="label">Most welfare gains come from income redistribution</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div>Based on economic research on minimum wage effects in monopsonistic labor markets</div>
+            <div style="margin-top: 10px;">
+                <span class="tag">#EconomicsResearch</span>
+                <span class="tag">#MinimumWage</span>
+                <span class="tag">#LaborMarkets</span>
+                <span class="tag">#EconomicPolicy</span>
+            </div>
+        </div>
+        
+        <div class="social-info">
+            <div class="social-heading">📊 Beyond the Minimum Wage Debate: What the Research Actually Shows</div>
+            <p>Did you know? New economic research reveals that minimum wage policy is less about fixing market inefficiencies and more about redistribution than economists previously thought.</p>
+            <p>This challenges traditional economic thinking about labor markets and employer power. Want to learn more about how this affects policy decisions? Check out our latest article!</p>
+            <div class="hashtags">#EconomicsResearch #MinimumWage #LaborMarkets #EconomicPolicy</div>
+        </div>
+    </div>
+</body>
+</html>
